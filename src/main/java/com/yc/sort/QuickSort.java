@@ -49,8 +49,8 @@ public class QuickSort extends Sort {
                     j--;
                 }
             }
-            array[i] = key;//中间元素
-            System.out.println("key =" + key);
+//            array[i] = key;//中间元素
+//            System.out.println("key =" + key);
             fastSort(array, begin, i - 1);//以切分元素为节点重新进行递归排序
             fastSort(array, i + 1, end);
         }
