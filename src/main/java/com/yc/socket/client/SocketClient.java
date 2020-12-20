@@ -1,4 +1,4 @@
-package com.yc.socket.server;
+package com.yc.socket.client;
 
 import java.io.*;
 import java.net.Socket;
