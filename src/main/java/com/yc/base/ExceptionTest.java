@@ -7,7 +7,7 @@ package com.yc.base;
 public class ExceptionTest {
     public static void main(String[] args) {
         try {
-            throw new ExceptionB();
+            throw new ExceptionA();
         } catch (ExceptionB exceptionB) {
             System.out.println("exceptionB");
         } catch (ExceptionA exceptionA) {

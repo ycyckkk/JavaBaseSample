@@ -1,8 +1,5 @@
 package com.yc.io;
 
-import org.apache.tools.ant.util.ReaderInputStream;
-import sun.management.snmp.util.SnmpTableCache;
-
 import java.io.*;
 
 /**

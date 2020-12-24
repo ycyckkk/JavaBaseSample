@@ -1,7 +1,6 @@
 package com.yc.encrypt;
 
 
-import sun.security.tools.keytool.Main;
 
 import javax.crypto.Cipher;
 import java.io.InputStream;
@@ -44,7 +43,7 @@ public class CertTest {
     }
 
     static KeyStore loadKeyStore(String keyStoreFile, String password) {
-        try (InputStream input = Main.class.getResourceAsStream(keyStoreFile)) {
+        try (InputStream input = CertTest.class.getResourceAsStream(keyStoreFile)) {
             if (input == null) {
                 throw new RuntimeException("file not found in classpath: " + keyStoreFile);
             }

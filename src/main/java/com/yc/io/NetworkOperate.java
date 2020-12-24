@@ -1,14 +1,12 @@
 package com.yc.io;
 
 import com.alibaba.fastjson.JSON;
-import jdk.internal.util.xml.impl.Input;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
 import java.net.URL;
-import java.net.UnknownHostException;
 
 /**
  * @Author yucheng
