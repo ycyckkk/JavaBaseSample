@@ -2,6 +2,7 @@ package com.yc.encrypt;
 
 import javax.crypto.Cipher;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.security.*;
 
 /**
@@ -29,5 +30,22 @@ public class RsaTest {
         cipher.init(Cipher.DECRYPT_MODE, privateKey);
         byte[] decrypted = cipher.doFinal(encrypted);
         System.out.println(String.format(new String(decrypted, "UTF-8")));
+
+        //待签名的消息
+        byte[] message1 = "Hello, I am Bob!".getBytes(StandardCharsets.UTF_8);
+        Signature s = Signature.getInstance("SHA1withRSA");
+        s.initSign(privateKey);
+        s.update(message1);
+        byte[] signed = s.sign();
+        System.out.println(String.format("signature: %x", new BigInteger(1, signed)));
+
+        //签名验证
+        Signature v = Signature.getInstance("SHA1withRSA");
+        v.initVerify(publicKey);
+        v.update(message1);
+        boolean valid = v.verify(signed);
+        System.out.println("签名验证结果valid=" + valid);
+
+
     }
 }
