@@ -9,7 +9,7 @@ import com.alibaba.fastjson.JSON;
 public class QuickSort extends Sort {
     public static void main(String[] args) {
         int[] array = new int[]{
-                 8, 2, 3, 4, 6, 5, 22, 33, 55, 66
+                72, 6, 57, 88, 60, 42, 83
 //                1, 4, 8, 2, 3, 5, 6, 5, 22, 33, 55, 66
 //                1, 2, 8, 4, 3, 5, 6, 5, 22, 33, 55, 66
         };
@@ -23,6 +23,7 @@ public class QuickSort extends Sort {
     }
 
     void fastSort(int[] array, int begin, int end) {
+        System.out.println("begin =" + begin + ",end=" + end);
         //保证不碰到
         if (begin < end) {
             int key = array[begin];
@@ -35,7 +36,9 @@ public class QuickSort extends Sort {
                 }
                 //小于则进行替换
                 if (i < j) {
+                    int temp1 = array[i];
                     array[i] = array[j];
+                    array[j] = temp1;
                     //首个元素已经替换
                     i++;
                 }
@@ -45,7 +48,9 @@ public class QuickSort extends Sort {
                 }
                 //大于则进行替换
                 if (i < j) {
+                    int temp1 = array[j];
                     array[j] = array[i];
+                    array[i] = temp1;
                     j--;
                 }
             }

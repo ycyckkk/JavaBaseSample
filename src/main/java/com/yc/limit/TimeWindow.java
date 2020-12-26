@@ -47,12 +47,12 @@ public class TimeWindow {
         int maxCount = 1;
         final TimeWindow timeWindow = new TimeWindow(10, 6);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 13; i++) {
             new Thread() {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(7000);
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
