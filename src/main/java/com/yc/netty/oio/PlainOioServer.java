@@ -5,6 +5,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * 阻塞网络编程
+ *
+ * BIO、NIO、AIO分别是什么？
  * server端read
  * 遇到情况:怎么维持长连接
  * @Author yucheng
